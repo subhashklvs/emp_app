@@ -2,3 +2,4 @@ Flask==3.0.0
 Werkzeug==3.0.1
 Flask-Mail==0.10.0
 itsdangerous==2.1.2
+gunicorn==22.0.0
