@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-10">
+        {% set bg_url = url_for('static', filename='image.jpg') %}
+        <div class="p-5 mb-4 bg-dark text-white rounded-3 shadow"
+            style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('{{ bg_url }}'); background-size: cover; background-position: center;">
+            <div class="container-fluid py-5 text-center">
+                <h1 class="display-5 fw-bold mb-3">Welcome to the Dashboard</h1>
+                <p class="col-md-8 mx-auto fs-4 mb-4">Manage your employees effectively using the tools provided. Use
+                    the navigation bar to add or view employees in the system.</p>
+                <div class="d-flex flex-wrap gap-3 justify-content-center">
+                    <a href="/view" class="btn btn-primary btn-lg px-4">View Employees</a>
+                    <a href="/add" class="btn btn-outline-light btn-lg px-4">Add Employee</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mt-2">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body text-center p-4">
+                        <h4 class="card-title text-primary">Directory</h4>
+                        <p class="card-text">Access the complete list of registered employees and their contact details.
+                        </p>
+                        <a href="/view" class="btn btn-outline-primary mt-2">Browse</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body text-center p-4">
+                        <h4 class="card-title text-primary">Onboarding</h4>
+                        <p class="card-text">Quickly add new team members to the organization's database.</p>
+                        <a href="/add" class="btn btn-outline-primary mt-2">Add New</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body text-center p-4">
+                        <h4 class="card-title text-primary">Management</h4>
+                        <p class="card-text">Update existing records, adjust salaries, or manage offboarding.</p>
+                        <a href="/view" class="btn btn-outline-primary mt-2">Manage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

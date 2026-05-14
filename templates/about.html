@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-4">
+    <div class="col-12 col-md-10 col-lg-8">
+        <div class="card shadow-sm border-0 overflow-hidden">
+            <div class="card-header bg-primary text-white py-3 border-0">
+                <h5 class="mb-0 fw-semibold"><i class="bi bi-info-circle me-2"></i>About Employee Management System</h5>
+            </div>
+            <div class="card-body p-4 p-md-5 bg-white">
+                <h3 class="fw-normal mb-3 text-dark">Simple & Powerful Employee Management System</h3>
+                <p class="text-muted mb-4 fs-6">
+                    Employee Management System is a modern web application built using Flask and SQLite. It helps organizations add, manage, update, search, and organize their employee records efficiently.
+                </p>
+                
+                <hr class="text-muted opacity-25 mb-4">
+                
+                <h4 class="fw-normal mb-4 text-dark">Features</h4>
+                
+                <ul class="list-unstyled mb-4">
+                    <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-success me-3 fs-5"></i> <span class="text-secondary">User Registration & Login</span></li>
+                    <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-success me-3 fs-5"></i> <span class="text-secondary">Create, Update & Delete Employees</span></li>
+                    <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-success me-3 fs-5"></i> <span class="text-secondary">Search & View Employee Directory</span></li>
+                    <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-success me-3 fs-5"></i> <span class="text-secondary">Secure Password Hashing</span></li>
+                    <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill text-success me-3 fs-5"></i> <span class="text-secondary">Responsive Bootstrap UI</span></li>
+                </ul>
+                
+                <hr class="text-muted opacity-25 mb-4">
+                
+                <h4 class="fw-normal mb-4 text-dark">Technologies Used</h4>
+                
+                <div class="d-flex flex-wrap gap-2 mb-5">
+                    <span class="badge bg-primary px-3 py-2">Python</span>
+                    <span class="badge bg-dark px-3 py-2">Flask</span>
+                    <span class="badge bg-success px-3 py-2">SQLite</span>
+                    <span class="badge bg-danger px-3 py-2">HTML</span>
+                    <span class="badge bg-warning text-dark px-3 py-2">CSS</span>
+                    <span class="badge bg-info text-dark px-3 py-2">Bootstrap 5</span>
+                </div>
+                
+                <hr class="text-muted opacity-25 mb-4">
+                
+                <p class="text-muted mb-0">Developed by <span class="text-dark fw-medium">Subhashklvs</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

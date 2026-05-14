@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Edit Employee{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+        <div class="card shadow-sm border-0 mt-4">
+            <div class="card-body p-4">
+                <h3 class="card-title text-center mb-4 fw-bold text-primary">Edit Employee</h3>
+                
+                <form method="post" action="/update">
+                    <div class="mb-3">
+                        <label for="eid" class="form-label">Employee ID</label>
+                        <input type="text" id="eid" name="eid" value="{{ emp[0] }}" class="form-control" required>
+                        <input type="hidden" name="original_eid" value="{{ emp[0] }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ename" class="form-label">Name</label>
+                        <input type="text" id="ename" name="ename" value="{{ emp[1] }}" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edept" class="form-label">Department</label>
+                        <input type="text" id="edept" name="edept" value="{{ emp[2] }}" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="esalary" class="form-label">Salary</label>
+                        <input type="number" id="esalary" name="esalary" value="{{ emp[3] }}" class="form-control" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="ephone" class="form-label">Phone</label>
+                        <input type="text" id="ephone" name="ephone" value="{{ emp[4] }}" class="form-control" required>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between gap-2">
+                        <a href="/view" class="btn btn-secondary w-50">Cancel</a>
+                        <button type="submit" class="btn btn-warning w-50 text-dark fw-semibold">Update Employee</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
